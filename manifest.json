@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "WikiTracker",
+  "version": "1.0",
+  "description": "Registro de interacciones en Wikipedia",
+  "permissions": ["storage"],
+  "action": {
+      "default_title": "WikiTracker",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.wikipedia.org/wiki/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
